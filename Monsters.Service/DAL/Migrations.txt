@@ -1,0 +1,3 @@
+﻿Add-Migration Monsters.Service.DAL.MonsterDbContext
+
+update-database

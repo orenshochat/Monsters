@@ -1,0 +1,11 @@
+﻿Add-Migration InitialPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
+Add-Migration InitialConfigurationDbMigration -c IdentityServer.Data.ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+Add-Migration SeedIdentityDbMigration -c IdentityDbContext -o Data/Migrations/AspNetIdentity/AspNetIdentityDb
+Add-Migration InitialIdentityDbMigration -c IdentityDbContext -o Data/Migrations/AspNetIdentity/AspNetIdentityDb
+Add-Migration SeedConfigurationMigration -c IdentityServer.Data.ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+Add-Migration InitialConfigurationMigration -c IdentityServer.Data.ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+
+
+Update-Database -Context IdentityServer.Data.ConfigurationDbContext
+Update-Database -Context PersistedGrantDbContext
+Update-Database -Context IdentityDbContext
